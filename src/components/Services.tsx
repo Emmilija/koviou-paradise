@@ -1,5 +1,4 @@
-import heroImage from "../assets/images/hero (1).webp";
-
+import heroImage from '../assets/images/hero (1).webp'
 const Hero: React.FC = () => {
   return (
     <section className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
