@@ -1,4 +1,4 @@
-import aboutImage from "../assets/images/house(1).webp";
+import aboutImage from "../assets/images/house1.webp";
 
 const AboutUs: React.FC = () => {
   return (

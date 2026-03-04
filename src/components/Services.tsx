@@ -1,4 +1,4 @@
-import heroImage from "../assets/images/hero.png";
+import heroImage from "../assets/images/hero (1).webp";
 
 const Hero: React.FC = () => {
   return (
