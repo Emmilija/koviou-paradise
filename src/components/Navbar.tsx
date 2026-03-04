@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import logo from "../assets/logo/logo-villa.png";
+import logo from "../assets/logo/logo-villa.webp";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -28,8 +28,10 @@ const Navbar: React.FC = () => {
         <div className="flex items-center gap-3 cursor-pointer">
           <img
             src={logo}
+            width={48}
+            height={48}
             alt="Villa Paradise Logo"
-            className="h-12 w-12 rounded-full object-cover shadow-lg-soft"
+            className="rounded-full object-cover shadow-lg-soft"
           />
           <span className="hidden md:block font-heading text-xl text-primary">
             Villa Paradise

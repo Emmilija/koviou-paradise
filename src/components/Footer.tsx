@@ -1,5 +1,5 @@
 
-import logo from "../assets/logo/logo-villa.png";
+import logo from "../assets/logo/logo-villa.webp";
 
 const Footer: React.FC = () => {
    const handleScrollTo = (id: string): void => {
