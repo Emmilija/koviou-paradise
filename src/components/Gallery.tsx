@@ -26,7 +26,7 @@ const Gallery: React.FC = () => {
 
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-dark">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-dark">
             Villa Gallery
           </h2>
           <div className="w-20 h-1 bg-sunset mx-auto mt-4 rounded-full"></div>

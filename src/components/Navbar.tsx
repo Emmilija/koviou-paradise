@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 border-b border-stone">
+<nav className="fixed top-0 left-0 w-full z-50 bg-white backdrop-blur-md shadow-sm border-b border-stone">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
 
         {/* Logo */}
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             alt="Villa Paradise Logo"
             className="rounded-full object-cover shadow-lg-soft"
           />
-          <span className="hidden md:block font-heading text-xl text-primary">
+          <span className="hidden md:block font-heading font-bold text-xl text-primary">
             Villa Paradise
           </span>
         </div>
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
           <li onClick={() => handleScrollTo("footer")} className="hover:text-primary transition cursor-pointer">
             Contact
           </li>
-
+<li>
           <a
             href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
             target="_blank"
@@ -106,6 +106,7 @@ const Navbar: React.FC = () => {
           >
             Book Now
           </a>
+          </li>
         </ul>
       </div>
     </nav>

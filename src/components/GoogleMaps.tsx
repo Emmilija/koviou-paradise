@@ -4,7 +4,7 @@ const GoogleMapSection = () => {
   return (
     <section className="w-full py-12 bg-light">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl font-heading text-primary mb-6 text-center">
+        <h2 className="text-3xl font-heading  font-bold text-primary mb-6 text-center">
           Find Us on the Map
         </h2>
         <div className="w-full h-96 rounded-xl overflow-hidden shadow-lg-soft">
