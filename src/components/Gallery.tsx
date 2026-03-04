@@ -1,15 +1,15 @@
 import React, { useRef } from "react";
-import villa1 from "../assets/images/villa1.webp";
-import villa2 from "../assets/images/villa2.webp";
-import villa3 from "../assets/images/villa3.webp";
-import villa4 from "../assets/images/villa4.webp";
-import villa5 from "../assets/images/villa5.webp";
-import villa6 from "../assets/images/beach.webp";
-import yard from "../assets/images/yard.jpeg";
-import house from "../assets/images/house.jpeg"
-import romm1 from "../assets/images/room1.jpeg"
+import villa1 from "../assets/images/villa 1 (1).webp";
+import villa2 from "../assets/images/villa2 (1).webp";
+import villa3 from "../assets/images/villa3 (1).webp";
+import villa4 from "../assets/images/villa4 (1).webp";
+import villa5 from "../assets/images/villa5 (1).webp";
+import house from "../assets/images/house(1).webp";
+import room1 from "../assets/images/room1(1).webp";
+import yard from "../assets/images/yard(1).webp";
 
-const images = [house, romm1, villa1, villa2, villa3, villa4, villa5, villa6, yard, ];
+
+const images = [house, room1, villa1, villa2, villa3, villa4, villa5, yard, ];
 
 const Gallery: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
