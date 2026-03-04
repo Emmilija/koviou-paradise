@@ -2,6 +2,12 @@
 import logo from "../assets/logo/logo-villa.png";
 
 const Footer: React.FC = () => {
+   const handleScrollTo = (id: string): void => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <footer id="footer" className="bg-footer text-white pt-16 pb-8 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -28,47 +34,47 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        {/* Navigation */}
+              {/* Navigation */}
         <div>
           <h3 className="font-heading text-lg mb-6 text-sunset">
             Navigation
           </h3>
+
           <ul className="space-y-3 text-white/70">
-            {["Home", "About Us", "Our Villa", "Gallery", "Contact"].map(
-              (item) => (
-                <li
-                  key={item}
-                  className="hover:text-white transition cursor-pointer"
-                >
-                  {item}
-                </li>
-              )
-            )}
+            <li
+              onClick={() => handleScrollTo("home")}
+              className="hover:text-white transition cursor-pointer"
+            >
+              Home
+            </li>
+            <li
+              onClick={() => handleScrollTo("about-us")}
+              className="hover:text-white transition cursor-pointer"
+            >
+              About Us
+            </li>
+            <li
+              onClick={() => handleScrollTo("villa")}
+              className="hover:text-white transition cursor-pointer"
+            >
+              Our Villa
+            </li>
+            <li
+              onClick={() => handleScrollTo("gallery")}
+              className="hover:text-white transition cursor-pointer"
+            >
+              Gallery
+            </li>
+            <li
+              onClick={() => handleScrollTo("footer")}
+              className="hover:text-white transition cursor-pointer"
+            >
+              Contact
+            </li>
           </ul>
         </div>
 
-        {/* Villas */}
-        <div>
-          <h3 className="font-heading text-lg mb-6 text-sunset">
-            Our Villas
-          </h3>
-          <ul className="space-y-3 text-white/70">
-            {[
-              "The Oasis Villa",
-              "Seaside Villa",
-              "Sunset Bliss Villa",
-              "The Palm Villa",
-              "Tropical Trees Villa",
-            ].map((villa) => (
-              <li
-                key={villa}
-                className="hover:text-white transition cursor-pointer"
-              >
-                {villa}
-              </li>
-            ))}
-          </ul>
-        </div>
+      
 
         {/* Contact */}
         <div>

@@ -1,4 +1,4 @@
-import heroImage from "../assets/images/cover.png";
+import heroImage from "../assets/images/hero.png";
 
 const Hero: React.FC = () => {
   return (
