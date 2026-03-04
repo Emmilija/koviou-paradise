@@ -1,15 +1,15 @@
-
 import logo from "../assets/logo/logo-villa.webp";
 
 const Footer: React.FC = () => {
-   const handleScrollTo = (id: string): void => {
+  const handleScrollTo = (id: string): void => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
-    <footer id="footer" className="bg-footer text-white pt-16 pb-8 px-6">
+    <footer id="footer" className="bg-footer text-gray-200 pt-16 pb-8 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
 
         {/* Logo + CTA */}
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             className="h-14 w-14 rounded-full mb-6 shadow-lg-soft bg-white p-1"
           />
 
-          <p className="mb-4 text-white/80 font-body">
+          <p className="mb-4 text-gray-300 font-body">
             Experience authentic Greek coastal living in Akti Koviou.
           </p>
 
@@ -34,13 +34,13 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-              {/* Navigation */}
+        {/* Navigation */}
         <div>
           <h3 className="font-heading text-lg mb-6 text-sunset">
             Navigation
           </h3>
 
-          <ul className="space-y-3 text-white/70">
+          <ul className="space-y-3 text-gray-300">
             <li
               onClick={() => handleScrollTo("home")}
               className="hover:text-white transition cursor-pointer"
@@ -74,27 +74,25 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-      
-
         {/* Contact */}
         <div>
           <h3 className="font-heading text-lg mb-6 text-sunset">
             Contact
           </h3>
-          <p className="text-white/70 mb-3">
+          <p className="text-gray-300 mb-3">
             Akti Koviou 1, Sithonia 630 88, Greece
           </p>
-          <p className="text-white/70 mb-3">
+          <p className="text-gray-300 mb-3">
             +306981097289
           </p>
-          <p className="text-white/70">
+          <p className="text-gray-300">
             paradisenikiti@gmail.com
           </p>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="mt-12 border-t border-white/20 pt-6 text-center text-white/50 text-sm">
+      <div className="mt-12 border-t border-gray-600 pt-6 text-center text-gray-300 text-sm">
         © {new Date().getFullYear()} Villa Paradise – Akti Koviou. All rights reserved.
       </div>
     </footer>
