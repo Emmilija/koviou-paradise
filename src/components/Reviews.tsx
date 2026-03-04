@@ -1,84 +1,4 @@
-// import React from "react";
-
-// type Stat = {
-//   value: string;
-//   title: string;
-//   description: string;
-// };
-
-// const stats: Stat[] = [
-//   {
-//     value: "3 km",
-//     title: "Close to Nikiti",
-//     description:
-//       "Only 3 km from Nikiti, giving you quick access to beaches, restaurants, and local attractions.",
-//   },
-//   {
-//     value: "11 km",
-//     title: "Near Neos Marmaras",
-//     description:
-//       "Just 11 km to Neos Marmaras — perfect for dining, shopping, and exploring the vibrant town life.",
-//   },
-//   {
-//     value: "1",
-//     title: "Only Lidl in Area",
-//     description:
-//       "Enjoy the convenience of having the only Lidl supermarket nearby for all your daily essentials.",
-//   },
-//   {
-//     value: "Brand New",
-//     title: "Modern Villa",
-//     description:
-//       "Freshly built with contemporary design, premium furnishings, and top-notch amenities for your comfort.",
-//   },
-//   {
-//     value: "Spacious",
-//     title: "Ideal for Groups",
-//     description:
-//       "Multiple bedrooms, large living areas, and a pool make it perfect for families or groups traveling together.",
-//   },
-//   {
-//     value: "Private",
-//     title: "Secluded & Relaxing",
-//     description:
-//       "Enjoy peace and privacy in a villa surrounded by nature, while still being close to key attractions.",
-//   },
-// ];
-
-// const StatsSection: React.FC = () => {
-//   return (
-//     <section className="py-16 px-6 bg-light">
-//       <div className="max-w-6xl mx-auto text-center">
-//         <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
-//           Why Choose Our Villa
-//         </h2>
-//         <p className="mt-2 text-dark/70 mb-12">
-//           Discover the perfect combination of comfort, location, and modern design for your stay in Sithonia.
-//         </p>
-
-//         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-//           {stats.map((stat, idx) => (
-//             <div
-//               key={idx}
-//               className="p-6 bg-white rounded-xl shadow-lg-soft hover:scale-105 transition-transform"
-//             >
-//               <h3 className="text-4xl sm:text-5xl font-heading font-bold text-primary">
-//                 {stat.value}
-//               </h3>
-//               <h4 className="mt-2 text-xl font-semibold text-dark">{stat.title}</h4>
-//               <p className="mt-2 text-dark/70 text-sm sm:text-base">{stat.description}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default StatsSection;
-
-import React from "react";
-import { MapPinIcon, ShoppingCartIcon, HomeIcon, UsersIcon, ShieldCheckIcon, SparklesIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon, ShoppingCartIcon, } from "@heroicons/react/24/outline";
 
 type Stat = {
   value: string;
@@ -109,27 +29,7 @@ const stats: Stat[] = [
       "Enjoy the convenience of having the only Lidl supermarket nearby for all your daily essentials.",
     icon: <ShoppingCartIcon className="w-8 h-8 text-primary" />,
   },
-  {
-    value: "Brand New",
-    title: "Modern Villa",
-    description:
-      "Freshly built with contemporary design, premium furnishings, and top-notch amenities for your comfort.",
-    icon: <HomeIcon className="w-8 h-8 text-primary" />,
-  },
-  {
-    value: "Spacious",
-    title: "Ideal for Groups",
-    description:
-      "Multiple bedrooms, large living areas, and a pool make it perfect for families or groups traveling together.",
-    icon: <UsersIcon className="w-8 h-8 text-primary" />,
-  },
-  {
-    value: "Private",
-    title: "Secluded & Relaxing",
-    description:
-      "Enjoy peace and privacy in a villa surrounded by nature, while still being close to key attractions.",
-    icon: <ShieldCheckIcon className="w-8 h-8 text-primary" />,
-  },
+  
 ];
 
 const StatsSection: React.FC = () => {

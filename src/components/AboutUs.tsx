@@ -1,38 +1,3 @@
-// import React from "react";
-// import aboutImage from "../assets/images/villa4.webp";
-
-// const AboutUs = () => {
-//   return (
-//     <section id="about-us" className="py-12 px-4 bg-white">
-//       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
-//         {/* Text */}
-//         <div className="lg:w-1/2">
-//           <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading text-dark mb-4">
-//             About Us
-//           </h2>
-//           <p className="text-dark/80 mb-4">
-//             At Koviou Villas, we specialize in crafting luxurious villas with modern design, elegant interiors, and unparalleled comfort. Each property is built with the finest materials and attention to detail, ensuring an exceptional living experience.
-//           </p>
-//           <p className="text-dark/80">
-//             Our team is passionate about delivering dream homes tailored to your lifestyle. From conception to completion, we ensure quality, style, and satisfaction in every project.
-//           </p>
-//         </div>
-
-//         {/* Image */}
-//         <div className="lg:w-1/2">
-//           <img
-//             src={aboutImage}
-//             alt="About Koviou Villas"
-//             className="w-full rounded-xl shadow-lg-soft object-cover"
-//           />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AboutUs;
-import React from "react";
 import aboutImage from "../assets/images/villa4.webp";
 
 const AboutUs: React.FC = () => {
@@ -64,17 +29,17 @@ const AboutUs: React.FC = () => {
           <div className="w-16 h-1 bg-sunset mb-6 rounded-full"></div>
 
           <p className="text-dark/80 text-lg leading-relaxed mb-6">
-            Nestled along the crystal-clear waters of Akti Koviou, Villa Paradise
-            offers a refined escape where modern comfort meets Mediterranean charm.
-            Wake up to the sound of the sea, unwind beneath golden sunsets,
-            and experience authentic Greek hospitality.
+        Located in the heart of Sithonia, Villa Paradise offers a unique and unforgettable stay in one of the most beautiful parts of the Aegean Sea. Nestled in the tranquil area of Elia, between the charming coastal towns of Nikiti and Neos Marmaras, the villa provides the perfect balance of privacy, comfort, and easy access to vibrant seaside life.
+
+
           </p>
 
-          <p className="text-dark/70 text-lg leading-relaxed">
-            Designed with elegance and simplicity, our villas blend natural tones,
-            open spaces, and premium amenities to create a peaceful sanctuary —
-            perfect for couples, families, and unforgettable summer moments.
-          </p>
+          <p className="text-dark/70 text-lg leading-relaxed mb-6">
+           Surrounded by lush Mediterranean landscapes and crystal-clear turquoise waters, guests can enjoy some of the most stunning beaches in Sithonia and across Halkidiki. The area is known for its unspoiled natural beauty, golden sandy shores, and breathtaking sunsets over the Aegean.
+  </p>
+  <p className="text-dark/70 text-lg leading-relaxed">
+          Sithonia is also known for its authentic Greek character, traditional seaside tavernas, fresh local cuisine, and welcoming hospitality. Guests can enjoy boat excursions along the coastline, discover secluded beaches accessible only by sea, or explore picturesque villages with stone-paved streets and charming local shops.
+        </p>
 
           <div className="mt-8">
             <a

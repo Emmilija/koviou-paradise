@@ -1,71 +1,4 @@
-// import React from "react";
-// import logo from "../assets/logo/koviou.png";
 
-// const Footer = () => {
-//   return (
-//     <footer id="footer" className="bg-light text-dark py-12 px-6">
-//       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        
-//         {/* Logo + Newsletter */}
-//         <div>
-//   <img
-//     src={logo}
-//     alt="Koviou Logo"
-//     className="h-12 w-12 rounded-full mb-4 shadow-lg-soft"
-//   />
-//   <p className="mb-2 font-body text-dark">Book your vacation </p>
-//   <div className="flex w-1/2 rounded-xl overflow-hidden shadow-lg-soft mt-2 max-w-sm">
-
-//     {/* CTA Button */}
-//         <a
-//           href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           className="bg-primary w-full text-light text-center px-16 py-4 font-semibold hover:bg-secondary transition"
-//         >
-//           Book Now
-//         </a>
-//   </div>
-// </div>
-//         {/* Links */}
-//         <div>
-//           <h3 className="font-heading text-lg mb-4 text-primary">Links</h3>
-//           <ul className="space-y-2 text-dark/70">
-//             <li className="hover:text-primary cursor-pointer">Home</li>
-//             <li className="hover:text-primary cursor-pointer">About Us</li>
-//             <li className="hover:text-primary cursor-pointer">Our Villa</li>
-//             <li className="hover:text-primary cursor-pointer">Gallery</li>
-//             <li className="hover:text-primary cursor-pointer">Contact</li>
-//           </ul>
-//         </div>
-
-//         {/* Our Villas */}
-//         <div>
-//           <h3 className="font-heading text-lg mb-4 text-primary">Our Villas</h3>
-//           <ul className="space-y-2 text-dark/70">
-//             <li className="hover:text-primary cursor-pointer">The Oasis Villa</li>
-//             <li className="hover:text-primary cursor-pointer">Seaside Villa</li>
-//             <li className="hover:text-primary cursor-pointer">Sunset Bliss Villa</li>
-//             <li className="hover:text-primary cursor-pointer">The Palm Villa</li>
-//             <li className="hover:text-primary cursor-pointer">Tropical Trees Villa</li>
-//           </ul>
-//         </div>
-
-//         {/* Contact Info */}
-//         <div>
-//           <h3 className="font-heading text-lg mb-4 text-primary">Get in Touch</h3>
-//           <p className="text-dark/70 mb-2">Business Office</p>
-//           <p className="text-dark/70 mb-2">Akti Koviou 1, Sithonia 630 88, Greece</p>
-//           <p className="text-dark/70 mb-2">+389 71222701</p>
-//           <p className="text-dark/70">karatashevskaemilija@gmail.com</p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-import React from "react";
 import logo from "../assets/logo/logo-villa.png";
 
 const Footer: React.FC = () => {
@@ -146,10 +79,10 @@ const Footer: React.FC = () => {
             Akti Koviou 1, Sithonia 630 88, Greece
           </p>
           <p className="text-white/70 mb-3">
-            +389 71222701
+            +306981097289
           </p>
           <p className="text-white/70">
-            karatashevskaemilija@gmail.com
+            paradisenikiti@gmail.com
           </p>
         </div>
       </div>
