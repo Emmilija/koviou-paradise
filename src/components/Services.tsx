@@ -7,8 +7,9 @@ const Hero: React.FC = () => {
   <img
     src={heroImage}
     alt="Villa Paradise - Akti Koviou"
-    width={1920}
-    height={1080}
+  
+    width={1050}
+    height={700}
     sizes="100vw"
     className="absolute inset-0 w-full h-full object-cover"
     fetchPriority="high"
