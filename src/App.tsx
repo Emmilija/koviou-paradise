@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 
-import Services from "./components/Services";
+import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import AboutUs from "./components/AboutUs";
@@ -12,7 +12,7 @@ const App = () => {
       <Navbar />
       <main className="pt-20">
   
-        <Services />
+        <Hero />
         <AboutUs />
         <Reviews />
         <Gallery />
