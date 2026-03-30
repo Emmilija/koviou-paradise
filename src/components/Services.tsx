@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
 
   {/* LCP Image */}
   <img
-    src="/hero (2).webp"
+    src="/hero.webp"
     alt="Hero - Villa Paradise"
     className="absolute inset-0 w-full h-full object-cover"
     width={1050}
