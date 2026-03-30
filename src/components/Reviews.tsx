@@ -36,7 +36,7 @@ const StatsSection: React.FC = () => {
   return (
     <section className="py-16 px-6 bg-light">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-footer">
           Why Choose Our Villa
         </h2>
         <p className="mt-2 text-dark/70 mb-12">
