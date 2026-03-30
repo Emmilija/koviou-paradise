@@ -1,9 +1,9 @@
 import Navbar from "./components/Navbar";
 
-// import Services from "./components/Services";
+import Services from "./components/Services";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
-// import AboutUs from "./components/AboutUs";
+import AboutUs from "./components/AboutUs";
 import GoogleMapSection from "./components/GoogleMaps";
 import Reviews from './components/Reviews'
 const App = () => {
@@ -12,8 +12,8 @@ const App = () => {
       <Navbar />
       <main className="pt-20">
   
-        {/* <Services /> */}
-        {/* <AboutUs /> */}
+        <Services />
+        <AboutUs />
         <Reviews />
         <Gallery />
         <GoogleMapSection />
