@@ -121,13 +121,14 @@ const Gallery: React.FC = () => {
                 className="relative flex-shrink-0 w-80 sm:w-96 rounded-2xl overflow-hidden shadow-lg-soft group snap-start cursor-pointer"
               >
                 <img
-                  src={img.large}
+                  src={img.medium}
                   srcSet={`
                     ${img.small} 500w,
                     ${img.medium} 800w,
                     ${img.large} 1200w
                   `}
-                  sizes="(max-width: 640px) 320px, (max-width: 1024px) 384px, 384px"
+                  decoding="async"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
                   alt={`Villa ${index + 1}`}
                   loading="lazy"
                   className="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
