@@ -117,11 +117,11 @@ const Gallery: React.FC = () => {
             {images.map((img, index) => (
               <div
                 key={index}
-                onClick={() => setActiveIndex(index)} // ✅ FIX HERE
+                onClick={() => setActiveIndex(index)} 
                 className="relative flex-shrink-0 w-80 sm:w-96 rounded-2xl overflow-hidden shadow-lg-soft group snap-start cursor-pointer"
               >
                 <img
-                  src={img.medium}
+                  src={img.small}
                   srcSet={`
                     ${img.small} 500w,
                     ${img.medium} 800w,
@@ -173,10 +173,15 @@ const Gallery: React.FC = () => {
           </button>
 
           {/* Image */}
-          <img
-            src={images[activeIndex].large}
-            className="max-w-[90%] max-h-[85%] object-contain rounded-xl"
-          />
+        <img
+  src={images[activeIndex].medium}
+  srcSet={`
+    ${images[activeIndex].medium} 800w,
+    ${images[activeIndex].large} 1200w
+  `}
+  loading="eager"
+  className="max-w-[90%] max-h-[85%] object-contain rounded-xl"
+/>
 
           {/* Right */}
           <button

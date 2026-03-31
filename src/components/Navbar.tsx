@@ -1,18 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
-
+import React, { useState } from "react";
+import Logo from './../../public/villa-logo.svg'
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const [menuHeight, setMenuHeight] = useState<string>("0px");
+  const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    if (menuRef.current) {
-      setMenuHeight(`${menuRef.current.scrollHeight}px`);
-    }
-  }, [isOpen]);
-
-  const handleScrollTo = (id: string): void => {
+  const handleScrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
@@ -21,17 +13,19 @@ const Navbar: React.FC = () => {
   };
 
   return (
-<nav className="sticky top-0 left-0 w-full z-50 bg-white backdrop-blur-md shadow-sm border-b border-stone">
+    <nav className="sticky top-0 left-0 w-full z-50 bg-white shadow-sm border-b border-stone">
+
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
 
-        {/* Logo */}
+        {/* ✅ SVG Logo (fastest possible) */}
         <div className="flex items-center gap-3 cursor-pointer">
           <img
-            src="logo-villa.webp"
+            src={Logo}
+            alt="Villa Paradise Logo"
             width={48}
             height={48}
-            alt="Villa Paradise Logo"
-            className="rounded-full object-cover shadow-lg-soft"
+            className="object-contain"
+            loading="eager"
           />
           <span className="hidden md:block font-heading font-bold text-xl text-primary">
             Villa Paradise
@@ -40,22 +34,13 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-8 font-medium text-dark">
-          <li
-            className="hover:text-primary transition cursor-pointer"
-            onClick={() => handleScrollTo("about-us")}
-          >
+          <li onClick={() => handleScrollTo("about-us")} className="hover:text-primary cursor-pointer">
             About
           </li>
-          <li
-            className="hover:text-primary transition cursor-pointer"
-            onClick={() => handleScrollTo("gallery")}
-          >
+          <li onClick={() => handleScrollTo("gallery")} className="hover:text-primary cursor-pointer">
             Gallery
           </li>
-          <li
-            className="hover:text-primary transition cursor-pointer"
-            onClick={() => handleScrollTo("footer")}
-          >
+          <li onClick={() => handleScrollTo("footer")} className="hover:text-primary cursor-pointer">
             Contact
           </li>
         </ul>
@@ -66,13 +51,13 @@ const Navbar: React.FC = () => {
             href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 bg-primary text-white rounded-xl font-semibold hover:bg-sunset hover:text-dark transition duration-300"
+            className="px-6 py-2 bg-primary text-white rounded-xl font-semibold hover:bg-sunset hover:text-dark transition"
           >
             Book Now
           </a>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile Button */}
         <button
           className="md:hidden text-2xl text-primary"
           onClick={() => setIsOpen(!isOpen)}
@@ -81,34 +66,32 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        ref={menuRef}
-        style={{ maxHeight: isOpen ? menuHeight : "0px" }}
-        className="md:hidden overflow-hidden transition-all duration-300 bg-white border-t border-stone"
-      >
-        <ul className="flex flex-col items-center space-y-6 py-6 text-dark font-medium">
-          <li onClick={() => handleScrollTo("about-us")} className="hover:text-primary transition cursor-pointer">
-            About
-          </li>
-          <li onClick={() => handleScrollTo("gallery")} className="hover:text-primary transition cursor-pointer">
-            Gallery
-          </li>
-          <li onClick={() => handleScrollTo("footer")} className="hover:text-primary transition cursor-pointer">
-            Contact
-          </li>
-<li>
-          <a
-            href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 px-6 py-2 bg-sunset text-dark rounded-xl font-semibold hover:bg-bronze transition"
-          >
-            Book Now
-          </a>
-          </li>
-        </ul>
-      </div>
+      {/* ✅ SIMPLER Mobile Menu (no JS height calculation) */}
+      {isOpen && (
+        <div className="md:hidden bg-white border-t border-stone">
+          <ul className="flex flex-col items-center space-y-6 py-6 text-dark font-medium">
+            <li onClick={() => handleScrollTo("about-us")} className="cursor-pointer">
+              About
+            </li>
+            <li onClick={() => handleScrollTo("gallery")} className="cursor-pointer">
+              Gallery
+            </li>
+            <li onClick={() => handleScrollTo("footer")} className="cursor-pointer">
+              Contact
+            </li>
+            <li>
+              <a
+                href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-sunset text-dark rounded-xl font-semibold"
+              >
+                Book Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

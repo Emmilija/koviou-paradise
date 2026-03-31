@@ -4,28 +4,41 @@ const Hero: React.FC = () => {
   return (
 <section className="relative w-full h-screen">
 
+  {/* ✅ Image (NOT absolute anymore) */}
   <img
-    src="/hero.webp"
+    src="/hero-medium.webp"
+    srcSet="
+      /hero-small.webp 600w,
+      /hero-medium.webp 1200w,
+      /hero-large.webp 1920w
+    "
+    sizes="100vw"
     alt="Villa Paradise"
-    className="absolute inset-0 w-full h-full object-cover"
+    className="w-full h-full object-cover"
     fetchPriority="high"
     loading="eager"
   />
 
+  {/* ✅ Overlay */}
   <div className="absolute inset-0 bg-black/50"></div>
 
-  <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+  {/* ✅ TEXT (must be absolute + z-index) */}
+  <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4">
     <h1 className="text-4xl md:text-6xl font-bold">
       Villa Paradise
     </h1>
-   <button
-          onClick={() =>
-            window.open(
-              "https://www.google.com/maps/search/Akti+Koviou+1,+Sithonia+630+88,+Greece/@40.1826677,23.6930904,14z",
-              "_blank"
-            )
-          }
-          className="underline mt-2">Akti Koviou</button>
+
+    <button
+      onClick={() =>
+        window.open(
+          "https://www.google.com/maps/search/Akti+Koviou+1,+Sithonia+630+88,+Greece",
+          "_blank"
+        )
+      }
+      className="underline mt-2"
+    >
+      Akti Koviou
+    </button>
   </div>
 
 </section>
