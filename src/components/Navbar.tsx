@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from './../../public/villa-logo.svg'
+import Logo from '/villa-logo.svg'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
             height={48}
             className="object-contain"
             loading="eager"
+              decoding="async"
           />
           <span className="hidden md:block font-heading font-bold text-xl text-primary">
             Villa Paradise

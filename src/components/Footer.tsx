@@ -1,5 +1,5 @@
 
-
+import Logo from "/villa-logo.svg"
 
 const Footer: React.FC = () => {
    const handleScrollTo = (id: string): void => {
@@ -15,7 +15,11 @@ const Footer: React.FC = () => {
        
         <div>
           <img
-            src="/logo-villa.webp"
+            src={Logo}
+             width={48}
+  height={48}
+  loading="eager"
+  decoding="async"
             alt="Villa Paradise Logo"
             className="h-14 w-14 rounded-full mb-6 shadow-lg-soft bg-white p-1"
           />

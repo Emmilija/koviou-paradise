@@ -57,14 +57,17 @@ const Gallery: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scrollLeft = () => {
+const scrollLeft = () => {
+  requestAnimationFrame(() => {
     scrollRef.current?.scrollBy({ left: -400, behavior: "smooth" });
-  };
+  });
+};
 
-  const scrollRight = () => {
+const scrollRight = () => {
+  requestAnimationFrame(() => {
     scrollRef.current?.scrollBy({ left: 400, behavior: "smooth" });
-  };
-
+  });
+};
   // ✅ Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -110,10 +113,13 @@ const Gallery: React.FC = () => {
           </button>
 
           {/* Images */}
-          <div
-            ref={scrollRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth px-4 h-full snap-x snap-mandatory"
-          >
+         <div
+  ref={scrollRef}
+  className="flex gap-6 overflow-x-auto px-4 h-full snap-x snap-mandatory will-change-transform"
+  style={{
+    scrollBehavior: "smooth",
+  }}
+>
             {images.map((img, index) => (
               <div
                 key={index}
@@ -131,7 +137,7 @@ const Gallery: React.FC = () => {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
                   alt={`Villa ${index + 1}`}
                   loading="lazy"
-                  className="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+                  className="w-full h-72 object-cover transform group-hover:scale-110 ttransition-transform duration-500"
                 />
               </div>
             ))}
