@@ -134,7 +134,7 @@ const scrollRight = () => {
                     ${img.large} 1200w
                   `}
                   decoding="async"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 400px, 384px"
                   alt={`Villa ${index + 1}`}
                   loading="lazy"
                   className="w-full h-72 object-cover transform group-hover:scale-110 ttransition-transform duration-500"
@@ -179,13 +179,15 @@ const scrollRight = () => {
           </button>
 
           {/* Image */}
-        <img
-  src={images[activeIndex].medium}
+   <img
+  src={images[activeIndex].large || images[activeIndex].medium}
   srcSet={`
     ${images[activeIndex].medium} 800w,
     ${images[activeIndex].large} 1200w
   `}
+  sizes="90vw"
   loading="eager"
+  decoding="async"
   className="max-w-[90%] max-h-[85%] object-contain rounded-xl"
 />
 

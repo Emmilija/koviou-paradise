@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
     srcSet="
       /hero-small.webp 600w,
       /hero-medium.webp 1200w,
-      /hero-large.webp 1920w
+      /hero-large.webp 1600w
     "
     sizes="100vw"
     alt="Villa Paradise"
