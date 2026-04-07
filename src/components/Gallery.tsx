@@ -40,6 +40,11 @@ import toiletDesk from '../assets/images/toilet desk.webp';
 import toiletMed from '../assets/images/toilet med.webp';
 import toiletSmall from '../assets/images/toilet small.webp';
 
+//BEACH
+import beachDesk from '../assets/images/beach-desk.webp';
+import beachMed from '../assets/images/beach-med.webp';
+import beachSmall from '../assets/images/beach-small.webp';
+
 
 // ✅ IMPORTANT: Use objects instead of strings
 const images = [
@@ -51,6 +56,7 @@ const images = [
   { small: twobedSmall, medium: twobedMed, large: twobedDesk },
   { small: kitchenSmall, medium: kitchenMed, large: kitchenDesk },
   { small: toiletSmall, medium: toiletMed, large: toiletDesk },
+  { small: beachSmall, medium: beachMed, large: beachDesk },
 ];
 
 const Gallery: React.FC = () => {

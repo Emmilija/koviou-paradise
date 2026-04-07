@@ -10,8 +10,8 @@ const Hero: React.FC = () => {
     srcSet="
       /hero-small.webp 600w,
       /hero-medium.webp 1200w,
-      /hero-large.webp 1600w
-    "
+      /hero-large.webp 1600w"
+      decoding="async"
     sizes="100vw"
     alt="Villa Paradise"
     className="w-full h-full object-cover"
@@ -19,11 +19,10 @@ const Hero: React.FC = () => {
     loading="eager"
   />
 
-  {/* ✅ Overlay */}
+
   <div className="absolute inset-0 bg-black/50"></div>
 
-  {/* ✅ TEXT (must be absolute + z-index) */}
-  <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4">
+  <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center font-heading text-white px-4">
     <h1 className="text-4xl md:text-6xl font-bold">
       Villa Paradise
     </h1>
