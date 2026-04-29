@@ -65,6 +65,7 @@ const Gallery: React.FC = () => {
 
 const scrollLeft = () => {
   requestAnimationFrame(() => {
+    
     scrollRef.current?.scrollBy({ left: -400, behavior: "smooth" });
   });
 };
