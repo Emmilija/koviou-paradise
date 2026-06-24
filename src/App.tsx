@@ -9,6 +9,7 @@ import GoogleMapSection from "./components/GoogleMaps";
 import Reviews from "./components/Reviews";
 import Rooms from "./components/Rooms";
 import RoomDetails from "./pages/RoomDetails";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Gallery = React.lazy(() => import("./components/Gallery"));
 
@@ -17,9 +18,9 @@ const App = () => {
     <div className="App">
       <Navbar />
 
-      <Routes>
+      <ScrollToTop />
 
-        {/* 🏠 HOME PAGE */}
+      <Routes>
         <Route
           path="/"
           element={
@@ -38,9 +39,7 @@ const App = () => {
           }
         />
 
-        {/* 🛏 ROOM DETAILS (ONLY ONE PAGE NOW) */}
         <Route path="/rooms/:type" element={<RoomDetails />} />
-
       </Routes>
 
       <Footer />

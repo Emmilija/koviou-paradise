@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* ✅ SIMPLER Mobile Menu (no JS height calculation) */}
+
       {isOpen && (
         <div className="md:hidden bg-white border-t border-stone">
           <ul className="flex flex-col items-center space-y-6 py-6 text-dark font-medium">

@@ -12,20 +12,20 @@ type Room = {
 
 const stats: Room[] = [
   {
-    value: "3 bed studio",
+    value: "3 Bed Studio",
     title: "Studio",
     image: Room1,
     path: "/rooms/studio",
   },
   {
-    value: "4 bed apartment",
-    title: "Type 1",
+    value: "4 Bed Apartment",
+    title: "Bunk Beds",
     image: Room2,
     path: "/rooms/type1",
   },
   {
-    value: "4 bed apartment",
-    title: "Type 2",
+    value: "4 Bed Apartment",
+    title: "Standard Beds",
     image: Room3,
     path: "/rooms/type2",
   },
@@ -43,7 +43,6 @@ const Rooms: React.FC = () => {
         </p>
       </div>
 
-      {/* 🟣 FEATURE STYLE GRID */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {stats.map((room, idx) => (
@@ -58,10 +57,9 @@ const Rooms: React.FC = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
 
-              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
-              {/* Content */}
+              
               <div className="absolute bottom-0 p-6 text-left text-white">
                 <h3 className="text-2xl font-bold">{room.value}</h3>
                 <p className="text-white/80">{room.title}</p>

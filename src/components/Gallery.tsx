@@ -46,7 +46,7 @@ import beachMed from '../assets/images/beach-med.webp';
 import beachSmall from '../assets/images/beach-small.webp';
 
 
-// ✅ IMPORTANT: Use objects instead of strings
+
 const images = [
   { small: villaSmall, medium: villaMed, large: villaDesk },
   { small: yardSmall, medium: yardMed, large: yardDesk },
@@ -161,7 +161,7 @@ const scrollRight = () => {
         </div>
       </div>
 
-      {/* ✅ LIGHTBOX */}
+
       {activeIndex !== null && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
 
