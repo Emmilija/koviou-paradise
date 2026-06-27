@@ -1,4 +1,4 @@
-import Room1 from "../assets/images/beds desk.webp";
+import Room1 from "../assets/images/3-bed.jpg";
 import Room2 from "../assets/images/bedroom desk.webp";
 import Room3 from "../assets/images/twobed desk.webp";
 import { Link } from "react-router-dom";
