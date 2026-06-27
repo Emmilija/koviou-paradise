@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           </p>
 
           <a
-            href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
+            href="https://www.booking.com/Share-OzhBwU"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-sunset text-dark px-8 py-3 rounded-xl font-bold hover:bg-bronze transition duration-300"

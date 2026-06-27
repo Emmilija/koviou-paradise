@@ -4,7 +4,6 @@ const Hero: React.FC = () => {
   return (
 <section className="relative w-full h-screen">
 
-  {/* ✅ Image (NOT absolute anymore) */}
   <img
     src="/hero-medium.webp"
     srcSet="

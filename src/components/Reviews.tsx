@@ -9,14 +9,14 @@ type Stat = {
 
 const stats: Stat[] = [
   {
-    value: "3 km",
+    value: "5 km",
     title: "Close to Nikiti",
     description:
       "Only 3 km from Nikiti, giving you quick access to beaches, restaurants, and local attractions.",
     icon: <MapPinIcon className="w-8 h-8 text-primary" />,
   },
   {
-    value: "11 km",
+    value: "15 km",
     title: "Near Neos Marmaras",
     description:
       "Just 11 km to Neos Marmaras — perfect for dining, shopping, and exploring the vibrant town life.",
@@ -51,7 +51,6 @@ const StatsSection: React.FC = () => {
             >
               
 
-              {/* Value */}
               <h3 className="text-4xl sm:text-5xl flex font-heading font-bold text-primary">
                 {stat.value}
           
@@ -63,7 +62,7 @@ const StatsSection: React.FC = () => {
               <h4 className="mt-2 text-xl font-semibold text-dark">{stat.title}</h4>
       </div>
 
-              {/* Description */}
+     
               <p className="mt-2 text-dark/70 text-sm sm:text-base">{stat.description}</p>
             </div>
           ))}

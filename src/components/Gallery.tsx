@@ -46,7 +46,7 @@ import beachMed from '../assets/images/beach-med.webp';
 import beachSmall from '../assets/images/beach-small.webp';
 
 
-// ✅ IMPORTANT: Use objects instead of strings
+
 const images = [
   { small: villaSmall, medium: villaMed, large: villaDesk },
   { small: yardSmall, medium: yardMed, large: yardDesk },
@@ -65,6 +65,7 @@ const Gallery: React.FC = () => {
 
 const scrollLeft = () => {
   requestAnimationFrame(() => {
+    
     scrollRef.current?.scrollBy({ left: -400, behavior: "smooth" });
   });
 };
@@ -74,7 +75,7 @@ const scrollRight = () => {
     scrollRef.current?.scrollBy({ left: 400, behavior: "smooth" });
   });
 };
-  // ✅ Keyboard navigation
+
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (activeIndex === null) return;
@@ -100,7 +101,7 @@ const scrollRight = () => {
     <section id="gallery" className="py-24 px-6 bg-white relative">
       <div className="max-w-7xl mx-auto">
 
-        {/* Title */}
+      
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-footer">
             Villa Gallery
@@ -110,7 +111,7 @@ const scrollRight = () => {
 
         <div className="relative w-full max-w-7xl mx-auto" style={{ height: '18rem' }}>
 
-          {/* Left Arrow */}
+
           <button
             onClick={scrollLeft}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-white/90 backdrop-blur-md text-primary rounded-full shadow-lg"
@@ -118,7 +119,6 @@ const scrollRight = () => {
             ‹
           </button>
 
-          {/* Images */}
          <div
   ref={scrollRef}
   className="flex gap-6 overflow-x-auto px-4 h-full snap-x snap-mandatory will-change-transform"
@@ -149,7 +149,7 @@ const scrollRight = () => {
             ))}
           </div>
 
-          {/* Right Arrow */}
+        
           <button
             onClick={scrollRight}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-white/90 text-primary rounded-full shadow-lg"
@@ -160,11 +160,11 @@ const scrollRight = () => {
         </div>
       </div>
 
-      {/* ✅ LIGHTBOX */}
+
       {activeIndex !== null && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
 
-          {/* Close */}
+  
           <button
             onClick={() => setActiveIndex(null)}
             className="absolute top-6 right-6 text-white text-3xl"
@@ -172,7 +172,7 @@ const scrollRight = () => {
             ✕
           </button>
 
-          {/* Left */}
+      
           <button
             onClick={() =>
               setActiveIndex(prev =>
@@ -184,7 +184,7 @@ const scrollRight = () => {
             ‹
           </button>
 
-          {/* Image */}
+    
    <img
   src={images[activeIndex].large || images[activeIndex].medium}
   srcSet={`

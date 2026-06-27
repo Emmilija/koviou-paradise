@@ -12,7 +12,7 @@ const GoogleMapSection = () => {
 
         <div className="w-full h-96 rounded-xl overflow-hidden shadow-lg-soft relative">
 
-          {/* ✅ PREVIEW (fast, no performance cost) */}
+   
           {!showMap && (
             <div
               onClick={() => setShowMap(true)}
@@ -33,7 +33,7 @@ const GoogleMapSection = () => {
             </div>
           )}
 
-          {/* ✅ REAL MAP (loads only when clicked) */}
+         
           {showMap && (
             <iframe
               title="Villa Paradise Location"

@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        {/* Image First on Desktop */}
+
         <div className="relative group">
       <img
   src={aboutImage}
@@ -18,7 +18,7 @@ const AboutUs: React.FC = () => {
   className="w-full h-[450px] object-cover rounded-2xl shadow-lg-soft"
 />
 
-          {/* Decorative Accent */}
+     
           <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-sunset rounded-2xl opacity-80 hidden lg:block"></div>
         </div>
 
