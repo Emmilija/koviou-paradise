@@ -18,7 +18,7 @@ const AboutUs: React.FC = () => {
   className="w-full h-[450px] object-cover rounded-2xl shadow-lg-soft"
 />
 
-          {/* Decorative Accent */}
+     
           <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-sunset rounded-2xl opacity-80 hidden lg:block"></div>
         </div>
 

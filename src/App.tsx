@@ -10,6 +10,7 @@ import Reviews from "./components/Reviews";
 import Rooms from "./components/Rooms";
 import RoomDetails from "./pages/RoomDetails";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToSection from "./components/ScrollToSection";
 
 const Gallery = React.lazy(() => import("./components/Gallery"));
 
@@ -19,6 +20,7 @@ const App = () => {
       <Navbar />
 
       <ScrollToTop />
+      <ScrollToSection />
 
       <Routes>
         <Route

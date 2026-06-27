@@ -26,6 +26,7 @@ const stats: Room[] = [
   {
     value: "4 Bed Apartment",
     title: "Standard Beds",
+
     image: Room3,
     path: "/rooms/type2",
   },
@@ -33,7 +34,7 @@ const stats: Room[] = [
 
 const Rooms: React.FC = () => {
   return (
-    <section className="py-20 px-6 bg-light">
+    <section id="rooms" className="py-20 px-6 bg-light">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-4xl font-bold text-footer">
           Choose Your Stay
@@ -50,7 +51,7 @@ const Rooms: React.FC = () => {
             
             <div className="relative group h-[420px] rounded-2xl overflow-hidden shadow-lg cursor-pointer">
 
-              {/* Image */}
+         
               <img
                 src={room.image}
                 alt={room.title}

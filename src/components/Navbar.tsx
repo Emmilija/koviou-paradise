@@ -1,23 +1,34 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import Logo from '/villa-logo.svg'
-
+import { useNavigate, useLocation } from "react-router-dom";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+const location = useLocation();
+const handleScrollTo = (id: string) => {
+  setIsOpen(false);
 
-  const handleScrollTo = (id: string) => {
+  if (location.pathname === "/") {
     const el = document.getElementById(id);
+
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
+      el.scrollIntoView({
+        behavior: "smooth",
+      });
     }
-  };
+  } else {
+    navigate("/", {
+      state: { scrollTo: id },
+    });
+  }
+};
 
   return (
     <nav className="sticky top-0 left-0 w-full z-50 bg-white shadow-sm border-b border-stone">
 
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
 
-        {/* ✅ SVG Logo (fastest possible) */}
+
         <div className="flex items-center gap-3 cursor-pointer">
           <img
             src={Logo}
@@ -44,12 +55,15 @@ const Navbar: React.FC = () => {
           <li onClick={() => handleScrollTo("footer")} className="hover:text-primary cursor-pointer">
             Contact
           </li>
+               <li onClick={() => handleScrollTo("rooms")} className="hover:text-primary cursor-pointer">
+            Rooms
+          </li>
         </ul>
 
-        {/* Booking Button */}
+  
         <div className="hidden md:block">
           <a
-            href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
+            href="https://www.booking.com/Share-OzhBwU"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 bg-primary text-white rounded-xl font-semibold hover:bg-sunset hover:text-dark transition"
@@ -58,7 +72,7 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Mobile Button */}
+   
         <button
           className="md:hidden text-2xl text-primary"
           onClick={() => setIsOpen(!isOpen)}
@@ -82,7 +96,7 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <a
-                href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
+                href="https://www.booking.com/Share-OzhBwU"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 bg-sunset text-dark rounded-xl font-semibold"

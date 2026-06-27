@@ -133,8 +133,8 @@ const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
 
       <a
-        href={`href="https://grckainfo.com/en/accommodation/koviou-paradise-studios-apartments/3725/"
-`}
+        href='href="https://www.booking.com/Share-OzhBwU"
+'
         target="_blank"
         className="bg-primary text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
       >
